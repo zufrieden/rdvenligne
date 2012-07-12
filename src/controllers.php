@@ -13,37 +13,6 @@ $app->get('/', function () use ($app) {
 ->bind('accueil')
 ;
 
-$app->get('/essai2', function () use ($app) {
-    return $app['twig']->render('essai2.html', array());
-})
-->bind('essai2')
-;
-
-$app->get('/hello/{name}', function ($name) use ($app) {
-    return 'Hello '.$app->escape($name); 
-})
-->bind('salut')
-;
-
-
-
-$app->get('/essai/{prenom}', function ($prenom) use ($app) {
-    return $app['twig']->render('essai.html', array(
-    'prenom' => $prenom
-    ));
-})
-->bind('essai')
-;
- 
-
-$app->get('/contact/{firstName}', function ($firstName) use ($app) {
-    return $app['twig']->render('contact.html', array(
-    	'name' => $firstName
-    ));
-})
-->bind('contact')
-;
-
 $app->error(function (\Exception $e, $code) use ($app) {
     if ($app['debug']) {
         return;

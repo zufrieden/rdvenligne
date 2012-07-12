@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block title %}
+RDV
+{% endblock %}
+
+{% block content %}
+
+<div class="center">
+
+    <!--contenu-->
+    <div class="content">
+
+        <!-- Header -->
+        <header>
+            <!--logo-->
+            <div id="logo"><img src="{{ app.request.basepath }}/image/logo.png"/></div>
+            <!-- texte de bienvenue -->
+            <article id="txt">
+                <h1>BIENVENUE SUR LE RDV EN LIGNE</h1>
+                <p>LE SITE DU GUIDE BIBLIQUE POUR</p>
+                <p>JEUNES DE LA LIGUE POUR LA LECTURE</p>
+                <p>DE LA BIBLE</p>
+            </article>
+        </header>
+
+<!-- Présentation -->
+        <div id="pres">
+            <!--photo de jeunes -->
+            <img src="{{ app.request.basepath }}/image/photo.png"/>
+            <!-- texte de présentation -->
+            <article id="presentation">
+                <p>Nous avons un rêve, c’est que la Bible devienne le lieu d’intimité et de rencontre avec Dieu; un espace qui transforme nos êtres.</p>
+                <p>Nous avons un rêve, c’est que les chrétiens, quelle que soit leur appartenance, partagent ensemble ce qu’ils ont découvert de Dieu au travers de la Bible et de la prière.</p>
+            </article>
+        </div>
+
+<!-- contenu, appel à l'action -->
+        <div id="contenu">
+            <article>
+            <h2>À toi de jouer...</h2>
+            <!-- icone et liens sur les différents sites -->
+            <ul>
+            <li>
+                <img src="{{ app.request.basepath }}/image/guide.png"/>
+                <p><span style="font-size:18px"><strong>Abonne-toi</strong></span> au guide papier et reçois 4 fois par années un guide avec un message quotidien</p>
+            </li>
+            <li>
+                <img src="{{ app.request.basepath }}/image/newsletter.png"/>
+                <p><span style="font-size:18px"><strong>Abonne-toi</strong></span> à la newsletter du guide et reçois gratuitement un message par mois</p>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/rdvenligne"><img src="{{ app.request.basepath }}/image/facebook.png"/></a>
+                <p><span style="font-size:18px"><strong>Rejoins-nous</strong></span> sur facebook pour partager et discuter des sujets qui sont les tiens !</p></li>
+            </ul>
+            </article>
+            <div id="exemplaire">
+                <a href="http://issuu.com/laligue/docs/rdv20122_specimen/2"><img src="{{ app.request.basepath }}/image/exemplaire.png"/></a>
+            </div>
+        </div>
+<!--footer-->
+        <footer>
+            <img src="{{ app.request.basepath }}/image/calel.png"/>
+            <p>Site de la Ligue pour la lecture de la Bible</p>
+            <!-- liens sur les sites de la ligue -->
+            <nav>
+                <a href="http://ligue.ch">ligue.ch</a> | <a href="http://www.laligue.net">ligue.net</a> | <a href="http://llbquebec.ca">llbquebec.ca</a> | <a href="http://ligue.be">ligue.be</a>
+            </nav>
+        </footer>
+    </div>
+</div>
+{% endblock %}
+

@@ -459,14 +459,24 @@ div#contenu article ul li {
   margin-bottom: 30px;
   width: 490px;
 }
-div#contenu article ul li img {
+div#contenu article ul li div {
   display: inline;
   float: left;
   width: 6.25%;
   margin: 0 1.0416666666666665%;
-  width: 45px;
-  height: 45px;
-  margin-right: 15px;
+  width: 48px;
+  height: 48px;
+  margin-right: 13px;
+  background: url("../image/icone.png");
+}
+div#contenu article ul li div.guide {
+  background-position: top left;
+}
+div#contenu article ul li div.news {
+  background-position: top center;
+}
+div#contenu article ul li div.facebook {
+  background-position: top right;
 }
 div#contenu article ul li p {
   font-size: 14px;

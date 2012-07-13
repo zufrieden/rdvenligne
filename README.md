@@ -10,16 +10,20 @@ Site d'une page développé sur [le microframework Silex](http://silex.sensiolab
 ## Installation
 - The recommended way to install Silex is [through composer](http://getcomposer.org). Just create a `composer.json` file and run the `php composer.phar install` command to install it:
 
+```JSON
     {
         "minimum-stability": "dev",
         "require": {
             "silex/silex": "1.0.*"
         }
     }
+```
 
 ## Tests
 
 To run the test suite, you need [composer](http://getcomposer.org) and [PHPUnit](https://github.com/sebastianbergmann/phpunit).
 
+```bash
     $ php composer.phar install --dev
     $ phpunit
+```

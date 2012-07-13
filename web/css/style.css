@@ -54,7 +54,7 @@ audio:not([controls]) {
 [hidden] {
   display: none;
 }
-/* définitions */
+/* définitions LESS */
 /* =============================================================================
    Base
    ========================================================================== */
@@ -359,21 +359,18 @@ td {
 div.center {
   background: url("../image/background.jpg") 50% 0 no-repeat;
   margin: 0 auto;
-  margin: 0 auto;
-  overflow: hidden;
 }
 div.content {
   width: 960px;
-  height: 768px;
   margin: 0 auto;
   padding: 0;
+  height: 768px;
 }
 header {
   display: inline;
   float: left;
   width: 97.91666666666666%;
   margin: 0 1.0416666666666665%;
-  height: 200px;
 }
 div#logo {
   display: inline;
@@ -526,13 +523,149 @@ footer nav a {
 footer nav a:hover {
   color: black;
 }
-/* ==|== media queries ======================================================
-   EXAMPLE Media Query for Responsive Design.
-   This example overrides the primary ('mobile first') styles
-   Modify as content requires.
-   ========================================================================== */
+/* ==|== media queries ======================================================*/
 @media only screen and (max-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+  /* pading adjustments for viewports that meet the condition */
+  div.center {
+    background: url("../image/bg_mobile.jpg") #ffffff 50% 0 no-repeat;
+  }
+  div.content {
+    width: 95%;
+    margin: 0 auto;
+  }
+  header {
+    width: 100%;
+    height: auto;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  div#logo {
+    display: block;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 60px;
+    height: auto;
+  }
+  div#logo img {
+    display: block;
+    margin: 0 auto;
+    height: auto;
+  }
+  article#txt {
+    width: 100%;
+    height: auto;
+    float: none;
+    margin-top: 0;
+    padding: 0;
+    display: block;
+  }
+  article#txt h1 {
+    font-size: 1.1em;
+    width: 100% margin: 0 auto;
+    padding: 0;
+  }
+  article#txt p {
+    font-size: 0.9em;
+    margin: 0 ;
+    padding: 0;
+  }
+  /* présentation */
+  div#pres {
+    margin: 0;
+    height: auto;
+    width: 90%;
+    padding: 0;
+  }
+  div#pres div#rectangle {
+    background-color: #bad7e7;
+    border-radius: 3px;
+    width: 100%;
+    height: auto;
+    margin: 0 5px;
+  }
+  div#pres div#rectangle img {
+    display: none;
+  }
+  div#pres div#rectangle article#presentation {
+    width: 90%;
+    height: auto;
+    float: none;
+    margin: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  div#pres div#rectangle article#presentation p {
+    font-size: 0.8em;
+  }
+  /* contenu */
+  div#contenu {
+    width: 90%;
+    margin: 0 5% 0 5%;
+    padding: 0;
+    height: auto;
+  }
+  div#contenu article {
+    width: 100%;
+    margin: 0;
+  }
+  div#contenu article h2 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+  div#contenu article ul li {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  div#contenu article ul li img {
+    margin-right: 15px;
+    margin-bottom: 24px;
+  }
+  div#contenu article ul li p {
+    font-size: 0.9em;
+  }
+  div#contenu article ul li .titre {
+    font-size: 1.2em;
+  }
+  div#contenu div#exemplaire {
+    display: none;
+  }
+  /* footer */
+  footer {
+    width: 90%;
+    height: 60px;
+    margin: 0 5%;
+    border-top: 1px solid #cb3852;
+  }
+  footer p {
+    width: 80%;
+    padding-top: 0;
+    margin: 25px 0 15px 5px;
+  }
+  footer nav {
+    margin-top: 0;
+    float: none;
+    margin-left: 45px;
+  }
+  footer nav a {
+    text-decoration: none;
+    color: #cb3852;
+  }
+}
+/* correction du menu de navigation en bas pour les mobiles en portaits */
+@media only screen and (max-width: 320px) {
+  footer img {
+    margin-top: 12px;
+  }
+  footer p {
+    margin: 18px 0 5px 5px;
+    font-size: 14px;
+  }
+  footer nav {
+    margin-left: 3px;
+  }
+  footer nav a {
+    font-size: 12px;
+  }
 }
 /* ==|== non-semantic helper classes ========================================
    Please define your styles before this section.

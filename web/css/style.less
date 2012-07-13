@@ -29,9 +29,10 @@ audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
 audio:not([controls]) { display: none; }
 [hidden] { display: none; }
 
-/* définitions */
+/* définitions LESS */
 @white:#FFFFFF;
 @rectangle: fade(@white, 60%);
+@mobile: #bad7e7;
 @rose: #cb3852;
 @grey: #535353;
 @font: 'Prosto One', cursive;
@@ -235,11 +236,12 @@ td { vertical-align: top; }
 /* ==|== primary styles ===================================================== */
 
 /* center the contents */
-div.center 
-{	background: url("../image/background.jpg") 50% 0 no-repeat; margin: 0 auto; margin: 0 auto; overflow: hidden; }
-div.content { width:960px; height:768px; margin:0 auto; padding:0;}
 
-header { .column(12); height: 200px; }
+div.center 
+{	background: url("../image/background.jpg") 50% 0 no-repeat; margin: 0 auto; }
+div.content { width:960px; margin:0 auto; padding:0; height: 768px;}
+
+header { .column(12); }
 
 div#logo { .column(4);
   img{margin-left:@left; margin-top: 24px; }
@@ -251,6 +253,7 @@ article#txt { .column(8); color: @rose; font-family: @font; margin-top:14px;
 }
 
 /*presentation*/
+
 div#pres { .column(12); margin-left: 60px; height: 185px;
   div#rectangle { background-color: @rectangle; width: 800px; height: 188px;
     img { margin-left:50px; margin-top:10px; float:left; }
@@ -263,6 +266,7 @@ div#pres { .column(12); margin-left: 60px; height: 185px;
 }
 
 /* contenu */
+
 div#contenu { .column(12); color: @rose; padding-top: 90px;
 
   article { .column(6); margin-left: @left; margin-bottom: 20px;
@@ -305,19 +309,73 @@ footer { color: @grey; font-size: 14px; .column(10); height: 60px; margin-left: 
 }
 
 
-/* ==|== media queries ======================================================
-   EXAMPLE Media Query for Responsive Design.
-   This example overrides the primary ('mobile first') styles
-   Modify as content requires.
-   ========================================================================== */
-
+/* ==|== media queries ======================================================*/
 @media only screen and (max-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+/* pading adjustments for viewports that meet the condition */
 
+
+div.center { background:url("../image/bg_mobile.jpg") white 50% 0 no-repeat; }
+div.content { width: 95%; margin: 0 auto;}
+header { width: 100%; height: auto; padding-bottom: 10px; padding-top: 10px;  }
+
+div#logo { display:block; width: 100%; margin-top:0; margin-bottom: 60px; height: auto;
+  img{ display:block; margin: 0 auto;  height: auto;}
+}
+
+article#txt { width: 100%; height: auto; float: none; margin-top: 0; padding: 0; display: block;
+  h1 { font-size: 1.1em; width: 100% margin: 0 auto; padding: 0;}
+  p { font-size: 0.9em; margin:0 ; padding: 0; }
+}
+
+/* présentation */
+div#pres { margin: 0; height: auto; width: 90%; padding: 0;
+  div#rectangle { background-color: @mobile; border-radius: 3px; width: 100%; height: auto; margin: 0 5px; 
+    img {display: none;}
+    article#presentation { width: 90%; height: auto; float: none; margin: 20px; padding-top:5px; padding-bottom: 5px;
+      p { font-size: 0.8em;}
+    }
+  }
+ 
+}
+
+/* contenu */
+div#contenu { width:90%; margin: 0 5% 0 5%; padding: 0; height: auto;
+
+  article { width:100%; margin: 0;
+    h2 { font-size:1.2em; margin-bottom: 20px; }
+
+    ul {
+      li { margin-bottom: 30px; width: 100%;
+        img { margin-right: 15px; margin-bottom: 24px;}
+        p { font-size: 0.9em;}
+        .titre { font-size: 1.2em; }
+      }
+    }
+  }
+  div#exemplaire { display: none; }
+}
+
+/* footer */
+
+footer { width: 90%;  height: 60px; margin:0 5%; border-top: 1px solid @rose;
+  p { width: 80%; padding-top: 0; margin: 25px 0 15px 5px; }
+  nav { margin-top: 0; float: none; margin-left: 45px;
+    a {text-decoration: none; color:@rose;   }
+  }
+}
 }
 
 
-
+/* correction du menu de navigation en bas pour les mobiles en portaits */
+@media only screen and (max-width: 320px) {
+footer { 
+  img {  margin-top: 12px;}
+  p { margin: 18px 0 5px 5px; font-size: 14px; }
+  nav { margin-left: 3px;
+    a {font-size: 12px;  }
+  }
+}
+}
 /* ==|== non-semantic helper classes ========================================
    Please define your styles before this section.
    ========================================================================== */

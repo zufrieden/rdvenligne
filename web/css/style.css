@@ -459,6 +459,10 @@ div#contenu article ul li {
   margin-bottom: 30px;
   width: 490px;
 }
+div#contenu article ul li a {
+  text-decoration: none;
+  color: #cb3852;
+}
 div#contenu article ul li div {
   display: inline;
   float: left;
@@ -540,7 +544,7 @@ footer nav a:hover {
     background: url("../image/bg_mobile.jpg") #ffffff 50% 0 no-repeat;
   }
   div.content {
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
   }
   header {
@@ -562,10 +566,10 @@ footer nav a:hover {
     height: auto;
   }
   article#txt {
-    width: 100%;
+    width: 90%;
     height: auto;
     float: none;
-    margin-top: 0;
+    margin: 0 auto;
     padding: 0;
     display: block;
   }
@@ -583,15 +587,15 @@ footer nav a:hover {
   div#pres {
     margin: 0;
     height: auto;
-    width: 90%;
+    width: 100%;
     padding: 0;
   }
   div#pres div#rectangle {
     background-color: #bad7e7;
     border-radius: 3px;
-    width: 100%;
+    width: 90%;
     height: auto;
-    margin: 0 5px;
+    margin: 0 auto;
   }
   div#pres div#rectangle img {
     display: none;
@@ -600,7 +604,7 @@ footer nav a:hover {
     width: 90%;
     height: auto;
     float: none;
-    margin: 20px;
+    margin: 0 auto;
     padding-top: 5px;
     padding-bottom: 5px;
   }
@@ -633,6 +637,10 @@ footer nav a:hover {
   div#contenu article ul li p {
     font-size: 0.9em;
   }
+  div#contenu article ul li a {
+    text-decoration: none;
+    color: #cb3852;
+  }
   div#contenu article ul li .titre {
     font-size: 1.2em;
   }
@@ -654,11 +662,8 @@ footer nav a:hover {
   footer nav {
     margin-top: 0;
     float: none;
-    margin-left: 45px;
-  }
-  footer nav a {
-    text-decoration: none;
-    color: #cb3852;
+    margin-left: 0;
+    font-size: 20px;
   }
 }
 /* correction du menu de navigation en bas pour les mobiles en portaits */
@@ -669,12 +674,6 @@ footer nav a:hover {
   footer p {
     margin: 18px 0 5px 5px;
     font-size: 14px;
-  }
-  footer nav {
-    margin-left: 3px;
-  }
-  footer nav a {
-    font-size: 12px;
   }
 }
 /* ==|== non-semantic helper classes ========================================

@@ -276,12 +276,14 @@ div#contenu { .column(12); color: @rose; padding-top: 90px;
     ul { padding-left: 0;
 
       li { margin-bottom: 30px; width: 490px;
+         a {text-decoration: none; color:@rose;   }
 
         div { .column(1); width:48px; height:48px; margin-right: 13px; background: url("../image/icone.png");
           &.guide { background-position: top left; }
           &.news { background-position: top center;}
           &.facebook { background-position: top right;}
            }
+
         p { font-size: 14px;}
         .titre { font-family: @font; font-size: 18px; }
       }
@@ -320,23 +322,23 @@ footer { color: @grey; font-size: 14px; .column(10); height: 60px; margin-left: 
 
 
 div.center { background:url("../image/bg_mobile.jpg") white 50% 0 no-repeat; }
-div.content { width: 95%; margin: 0 auto;}
+div.content { width: 100%; margin: 0 auto;}
 header { width: 100%; height: auto; padding-bottom: 10px; padding-top: 10px;  }
 
 div#logo { display:block; width: 100%; margin-top:0; margin-bottom: 60px; height: auto;
   img{ display:block; margin: 0 auto;  height: auto;}
 }
 
-article#txt { width: 100%; height: auto; float: none; margin-top: 0; padding: 0; display: block;
+article#txt { width: 90%; height: auto; float: none; margin: 0 auto; padding: 0; display: block;
   h1 { font-size: 1.1em; width: 100% margin: 0 auto; padding: 0;}
   p { font-size: 0.9em; margin:0 ; padding: 0; }
 }
 
 /* présentation */
-div#pres { margin: 0; height: auto; width: 90%; padding: 0;
-  div#rectangle { background-color: @mobile; border-radius: 3px; width: 100%; height: auto; margin: 0 5px; 
+div#pres { margin: 0; height: auto; width: 100%; padding: 0;
+  div#rectangle { background-color: @mobile; border-radius: 3px; width: 90%; height: auto; margin: 0 auto; 
     img {display: none;}
-    article#presentation { width: 90%; height: auto; float: none; margin: 20px; padding-top:5px; padding-bottom: 5px;
+    article#presentation { width: 90%; height: auto; float: none; margin: 0 auto; padding-top:5px; padding-bottom: 5px;
       p { font-size: 0.8em;}
     }
   }
@@ -353,6 +355,7 @@ div#contenu { width:90%; margin: 0 5% 0 5%; padding: 0; height: auto;
       li { margin-bottom: 30px; width: 100%;
         img { margin-right: 15px; margin-bottom: 24px;}
         p { font-size: 0.9em;}
+        a { text-decoration: none; color: @rose; }
         .titre { font-size: 1.2em; }
       }
     }
@@ -364,9 +367,9 @@ div#contenu { width:90%; margin: 0 5% 0 5%; padding: 0; height: auto;
 
 footer { width: 90%;  height: 60px; margin:0 5%; border-top: 1px solid @rose;
   p { width: 80%; padding-top: 0; margin: 25px 0 15px 5px; }
-  nav { margin-top: 0; float: none; margin-left: 45px;
-    a {text-decoration: none; color:@rose;   }
+  nav { margin-top: 0; float: none; margin-left: 0; font-size: 20px;
   }
+
 }
 }
 
@@ -376,9 +379,6 @@ footer { width: 90%;  height: 60px; margin:0 5%; border-top: 1px solid @rose;
 footer { 
   img {  margin-top: 12px;}
   p { margin: 18px 0 5px 5px; font-size: 14px; }
-  nav { margin-left: 3px;
-    a {font-size: 12px;  }
-  }
 }
 }
 /* ==|== non-semantic helper classes ========================================

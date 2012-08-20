@@ -13,6 +13,12 @@ $app->get('/', function () use ($app) {
 ->bind('accueil')
 ;
 
+$app->get('/facebook', function () use ($app) {
+    header("location:http://www.facebook.com/rdvenligne");
+})
+->bind('facebook')
+;
+
 $app->error(function (\Exception $e, $code) use ($app) {
     if ($app['debug']) {
         return;

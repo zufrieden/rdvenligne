@@ -1,4 +1,3 @@
-/* GRID */
 /*
  * HTML5 Boilerplate
  *
@@ -73,6 +72,7 @@ input,
 select,
 textarea {
   /*font-family: sans-serif; color: #222;*/
+
   font-family: arial;
 }
 body {
@@ -500,6 +500,13 @@ div#contenu div#exemplaire {
 div#contenu div#exemplaire img {
   width: 215px;
   height: 250px;
+}
+.form-abo {
+  margin-left: 65px;
+}
+.form-abo label {
+  float: left;
+  width: 100px;
 }
 /* footer */
 footer {

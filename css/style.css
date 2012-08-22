@@ -482,6 +482,19 @@ div#contenu article ul li div.news {
 div#contenu article ul li div.facebook {
   background-position: top right;
 }
+div#contenu article ul li.facebook-bt {
+  background-color: #cb3852;
+  padding: 0.3em;
+  border-radius: 5px;
+}
+div#contenu article ul li.facebook-bt a,
+div#contenu article ul li.facebook-bt p {
+  color: #fff;
+}
+div#contenu article ul li.facebook-bt div {
+  width: 40px;
+  margin-top: 10px;
+}
 div#contenu article ul li p {
   font-size: 14px;
 }
